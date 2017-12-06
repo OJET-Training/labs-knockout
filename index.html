@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,22 +11,24 @@
 
     <script src="js/libs/vendor/requirejs/require.js" data-main="js/main" type="text/javascript"></script>
 </head>
+
 <body>
 
-    <navbar params="title: 'Knockout Lab', currentPage: currentPage, pages: ['home', 'countries']"></navbar>
+    <navbar params="title: 'Knockout Lab', pages: pages"></navbar>
 
-    <div class="container-fluid" data-bind="component: {
-        name: currentPage
-    }"></div>
+    <div class="container-fluid">
+        <ko-component-router></ko-component-router>
 
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            Toggle Button
-        </div>
-        <div class="panel-body">
-            <button class="btn btn-primary" data-bind="toggle: toggled, text: 'Active: ' + toggled()"></button>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Toggle Button
+            </div>
+            <div class="panel-body">
+                <button class="btn btn-primary" data-bind="toggle: toggled, text: 'Active: ' + toggled()"></button>
+            </div>
         </div>
     </div>
 
 </body>
+
 </html>
