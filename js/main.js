@@ -13,3 +13,9 @@ requirejs.config({
         }
     }
 });
+
+require(['knockout', '../app'], function(ko, app) {
+    console.log('app loaded ...');
+
+    ko.applyBindings(new app())
+});
