@@ -6,6 +6,7 @@ requirejs.config({
         'bootstrap': './vendor/bootstrap/dist/js/bootstrap',
         'jquery': './vendor/jquery/dist/jquery',
         'text': './vendor/text/text',
+        'navbar': '../components/navbar/navbar'
     },
     shim: {
         bootstrap: {
@@ -31,6 +32,10 @@ require(['knockout', 'jquery', '../app'], function(ko, $, app) {
             $(element).toggleClass("active", ko.unwrap(valueAccessor()));
         }
     };
+
+    ko.components.register('navbar', {
+        require: 'navbar'
+    });
 
     ko.applyBindings(new app())
 });
