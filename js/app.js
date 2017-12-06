@@ -15,7 +15,16 @@ define(['knockout'], function(ko) {
             console.log(country);
             self.selectedCountryId(country.id);
             self.selectedCountryName(country.name);
-        }
+        };
+
+        self.addCountry = function() {
+            self.countries.push({
+                id: self.selectedCountryId,
+                name: self.selectedCountryName
+                id: self.selectedCountryId(),
+                name: self.selectedCountryName()
+            });
+        };
     }
 
     return ViewModel;
