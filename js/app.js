@@ -19,11 +19,11 @@ define(['knockout'], function(ko) {
 
         self.addCountry = function() {
             self.countries.push({
-                id: self.selectedCountryId,
-                name: self.selectedCountryName
                 id: self.selectedCountryId(),
                 name: self.selectedCountryName()
             });
+            self.selectedCountryId('');
+            self.selectedCountryName('');
         };
     }
 
