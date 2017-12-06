@@ -29,6 +29,8 @@ define(['knockout'], function(ko) {
         self.deleteCountry = function(country) {
             self.countries.remove(country);
         };
+
+        self.toggled = ko.observable(false);
     }
 
     return ViewModel;

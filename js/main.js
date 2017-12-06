@@ -14,8 +14,22 @@ requirejs.config({
     }
 });
 
-require(['knockout', '../app'], function(ko, app) {
+require(['knockout', 'jquery', '../app'], function(ko, $, app) {
     console.log('app loaded ...');
+
+    ko.bindingHandlers.toggle = {
+        init: function(element, valueAccessor, allBindings, viewModel, bindingContext) {
+            var value = valueAccessor();
+            $(element).click(function(event) {
+                event.preventDefault();
+                var previousValue = ko.unwrap(value);
+                value(!previousValue);
+            });
+        },
+        update: function(element, valueAccessor, allBindings, viewModel, bindingContext) {
+            $(element).toggleClass("active", ko.unwrap(valueAccessor()));
+        }
+    };
 
     ko.applyBindings(new app())
 });
