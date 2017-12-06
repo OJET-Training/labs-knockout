@@ -6,7 +6,9 @@ requirejs.config({
         'bootstrap': './vendor/bootstrap/dist/js/bootstrap',
         'jquery': './vendor/jquery/dist/jquery',
         'text': './vendor/text/text',
-        'navbar': '../components/navbar/navbar'
+        'navbar': '../components/navbar/navbar',
+        'home': '../pages/home/home',
+        'countries': '../pages/countries/countries'
     },
     shim: {
         bootstrap: {
@@ -35,6 +37,14 @@ require(['knockout', 'jquery', '../app'], function(ko, $, app) {
 
     ko.components.register('navbar', {
         require: 'navbar'
+    });
+
+    ko.components.register('home', {
+        require: 'home'
+    });
+
+    ko.components.register('countries', {
+        require: 'countries'
     });
 
     ko.applyBindings(new app())

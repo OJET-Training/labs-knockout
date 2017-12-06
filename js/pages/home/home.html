@@ -1,0 +1,8 @@
+<h1>Home</h1>
+<form action="#">
+    <div class="form-group">
+        <label for="name-field">Greet: </label>
+        <input data-bind="value: name" type="text" id="name-field" class="form-control" placeholder="Stefan">
+    </div>
+</form>
+<h2 data-bind="visible: name() && name().length > 0">Hallo <span data-bind="text: name"><span></h2>
