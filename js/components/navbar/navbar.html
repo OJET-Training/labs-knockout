@@ -10,7 +10,8 @@
             <a class="navbar-brand" href="#" data-bind="text: title"></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav" data-bind="foreach: pages">
+                <li><a href="#" data-bind="text: $data.toUpperCase(), click: $parent.switchPage"></a></li>
             </ul>
         </div>
     </div>

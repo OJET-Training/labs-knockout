@@ -12,10 +12,10 @@
 </head>
 <body>
 
-    <navbar params="title: 'Knockout Lab'"></navbar>
+    <navbar params="title: 'Knockout Lab', currentPage: currentPage, pages: ['home', 'countries']"></navbar>
 
     <div class="container-fluid" data-bind="component: {
-        name: 'home'
+        name: currentPage
     }"></div>
 
     <div class="panel panel-default">
