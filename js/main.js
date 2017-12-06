@@ -6,6 +6,7 @@ requirejs.config({
         'bootstrap': './vendor/bootstrap/dist/js/bootstrap',
         'jquery': './vendor/jquery/dist/jquery',
         'text': './vendor/text/text',
+        'router': './vendor/ko-component-router/dist/ko-component-router',
         'navbar': '../components/navbar/navbar',
         'home': '../pages/home/home',
         'countries': '../pages/countries/countries'
@@ -18,7 +19,7 @@ requirejs.config({
     }
 });
 
-require(['knockout', 'jquery', '../app'], function(ko, $, app) {
+require(['knockout', 'router', 'jquery', '../app'], function(ko, router, $, app) {
     console.log('app loaded ...');
 
     ko.bindingHandlers.toggle = {
@@ -45,6 +46,15 @@ require(['knockout', 'jquery', '../app'], function(ko, $, app) {
 
     ko.components.register('countries', {
         require: 'countries'
+    });
+
+    var Router = router.Router;
+    Router.setConfig({
+      hashbang: true,
+    })
+    Router.useRoutes({
+        '/': ['home'],
+        '/countries': ['countries']
     });
 
     ko.applyBindings(new app())
