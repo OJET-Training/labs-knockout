@@ -29,11 +29,13 @@
                 <thead>
                     <th>Id</th>
                     <th>Country</th>
+                    <th>Action</th>
                 </thead>
                 <tbody data-bind="foreach: countries">
                     <tr data-bind="click: $parent.selectCountry">
                         <td data-bind="text: id"></td>
                         <td data-bind="text: name"></td>
+                        <td><a href="#" data-bind="click: $parent.deleteCountry"><span class="glyphicon glyphicon-trash"></span></a></td>
                     </tr>
                 </tbody>
             </table>

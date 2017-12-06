@@ -25,6 +25,10 @@ define(['knockout'], function(ko) {
             self.selectedCountryId('');
             self.selectedCountryName('');
         };
+
+        self.deleteCountry = function(country) {
+            self.countries.remove(country);
+        };
     }
 
     return ViewModel;
