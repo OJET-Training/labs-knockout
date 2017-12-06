@@ -8,6 +8,14 @@ define(['knockout'], function(ko) {
             { id: '0', name: 'Germany' },
             { id: '1', name: 'Austria' },
         ]);
+
+        self.selectedCountryId = ko.observable();
+        self.selectedCountryName = ko.observable();
+        self.selectCountry = function(country) {
+            console.log(country);
+            self.selectedCountryId(country.id);
+            self.selectedCountryName(country.name);
+        }
     }
 
     return ViewModel;
