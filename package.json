@@ -1,0 +1,22 @@
+{
+  "name": "labs-knockout",
+  "version": "1.0.0",
+  "description": "Oracle JET Training Knockout Lab",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jansolo/labs-knockout.git"
+  },
+  "keywords": [
+    "Lab"
+  ],
+  "author": "jan.illetschko@3kraft.com",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jansolo/labs-knockout/issues"
+  },
+  "homepage": "https://github.com/jansolo/labs-knockout#readme"
+}
