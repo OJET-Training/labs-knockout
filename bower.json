@@ -1,0 +1,22 @@
+{
+  "name": "labs-knockout",
+  "description": "Oracle JET Training Knockout Lab",
+  "main": "",
+  "authors": [
+    "jan.illetschko@3kraft.com"
+  ],
+  "license": "UNLICENSED",
+  "keywords": [
+    "Lab"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/libs/vendor",
+    "test",
+    "tests"
+  ]
+}
