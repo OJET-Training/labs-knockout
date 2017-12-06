@@ -5,6 +5,7 @@ requirejs.config({
         'knockout': './vendor/knockout/dist/knockout.debug',
         'bootstrap': './vendor/bootstrap/dist/js/bootstrap',
         'jquery': './vendor/jquery/dist/jquery',
+        'text': './vendor/text/text',
     },
     shim: {
         bootstrap: {
